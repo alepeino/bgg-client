@@ -1,0 +1,11 @@
+{
+  "name": "bgg",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node resources/server.js"
+  },
+  "license": "Eclipse",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
