@@ -18,14 +18,16 @@
                                     [:cljsbuild :builds :prod :compiler :output-to]
                                     [:sass :dst]]
 
-  :figwheel {:css-dirs ["resources/public/css"]}
+  :figwheel {:css-dirs ["resources/public/css"]
+             :ring-handler bgg.server/handler}
 
   :sass {:src "resources/sass"
          :dst "resources/public/css/"
          :style :expanded}
 
   :profiles {:dev {:dependencies [[binaryage/devtools "0.8.2"]
-                                  [figwheel-sidecar "0.5.10"]]
+                                  [figwheel-sidecar "0.5.10"]
+                                  [ring/ring "1.6.1"]]
                    :plugins      [[lein-figwheel "0.5.10"]]}
              :prod {:sass {:style :compressed}}}
 
